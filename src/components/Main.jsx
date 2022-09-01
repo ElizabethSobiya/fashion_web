@@ -1,12 +1,20 @@
 import React,{useState} from 'react'
+// import axios from 'axios';
 import Bg from '../assets/hanger.png'
 import Logo from '../assets/logo.png'
 import {RiSearchLine} from 'react-icons/ri'
+import Gray from '../assets/1.png'
+import White from '../assets/2.png'
+import Red from '../assets/3.png'
+import Yellow from '../assets/4.png'
+import Black from '../assets/5.png'
+
 
 // search bar in the homepage
 
 function Main() {
   const [isShown, setIsShown] = useState(false);
+  
 
   const handleClick = event => {
     //  toggle shown state
@@ -31,18 +39,37 @@ function Main() {
         <img src={Logo} alt="" className='w-20 absolute right-5 top-4' />
      </div>
   </div>
-  {/* 👇️ show elements on click */}
+  {/*  show elements on click */}
   {isShown && (
+        <div className='w-[65%] h-[65%] font-inter bg-white border-none  absolute flex flex-col j p-5  right-[19%] top-[30%]'>
+        <h1 className='font-bold pb-4 '>Latest Trends</h1>
+        
+        <div className='grid grid-cols-5  text-sm font-light text-black h-[55%] m-0 '>
         <div>
-          <h1>Latest Trends</h1>
-          <div>
-            <img src="" alt="" />
-            <p>  
-            </p>
-          </div>
-          <div>
-            <h1>Popular Suggestions</h1>
-            <ul>
+          <img src={Gray} alt="Shirt" className=' w-[75%] h-[70%]' />
+          <p className= ' font-inter opacity-75 text-xs pt-1'>Shirt with Puffed sleeves</p>
+        </div>
+        <div>
+          <img src={White} alt="jumpsuit"  className='w-[75%] h-[70%]'/>
+          <p className= ' font-inter opacity-75 text-xs pt-1'>Linen jumpsuit</p>
+        </div>
+        <div>
+          <img src={Red} alt="formal"  className='w-[75%] h-[70%]'/>
+          <p className= ' font-inter opacity-75 text-xs pt-1'>White formal suit</p>
+        </div>
+        <div>
+          <img src={Yellow} alt="Pattern" className='w-[75%] h-[70%]' />
+          <p className= ' font-inter opacity-75 text-xs pt-1'>Pattern dresses</p>
+        </div>
+        <div>
+          <img src={Black} alt="Leather"  className='w-[75%] h-[70%]'/>
+          <p className= ' font-inter opacity-75 text-xs pt-1'>Leather shirt dress</p>
+        </div>
+        </div>
+         
+          <div className='flex flex-col h-full '>
+            <h1 className='font-bold pl-1'>Popular Suggestions</h1>
+            <ul className='font-normal text-xs p-1'>
               <li>Striped shirt dress</li>
               <li>Satin shirts</li>
               <li>Denim Jumpsuit</li>
