@@ -4,7 +4,7 @@ import Bg from '../assets/hanger.png'
 import Logo from '../assets/logo.png'
 import {RiSearchLine} from 'react-icons/ri'
 import Latest from './Latest'
-import Search from './Search'
+// import Search from './Search'
 import {useNavigate} from 'react-router-dom'
 
 
