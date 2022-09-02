@@ -9,8 +9,11 @@ function Latest() {
   return (
    <>
    <div className='w-[65%] md:h-[65%] sm:h-[70%] font-inter bg-white border-none  absolute flex flex-col md:p-5 sm:p-5 md:mt-3 sm:mt-2 right-[18%] top-[30%]'>
+       {/* latest trends box open */}
+
         <h1 className='font-bold pb-3 '>Latest Trends</h1>
         
+        {/* latest trend products and there images */}
         <div className='grid grid-cols-5  text-sm font-light text-black md:h-[55%] sm:h-[65%] m-0 '>
         <div>
           <img src={Gray} alt="Shirt" className=' w-[75%] h-[70%]' />
@@ -34,9 +37,11 @@ function Latest() {
         </div>
         </div>
          
+         {/*suggested products  */}
           <div className='flex flex-col md:h-[8%] sm:h-[4%]'>
             <p className='font-bold md:text-xs sm:text-sm md:pl-1 sm:pl-2 '>Popular Suggestions</p>
             <ul className='font-normal text-xs p-1'>
+              {/* suggested product list */}
               <li>Striped shirt dress</li>
               <li>Satin shirts</li>
               <li>Denim Jumpsuit</li>

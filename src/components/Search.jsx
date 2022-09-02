@@ -9,6 +9,7 @@ function Search() {
     
   return (
    <>
+   {/* whole search side content and page rendering */}
     <div className= "w-full h-[5%] bg-white">
     <img src={Logo} alt="" className='w-[5%] absolute right-4 top-4'  />
     <div className='w-full mt-10'>

@@ -5,10 +5,12 @@ import { Container, Radio, Rating } from "./RatingStyles";
 
 
 const Rate = () => {
+  //rating star useState
   const [rate, setRate] = useState(0);
   return (
     <Container>
       {[...Array(5)].map((item, index) => {
+        //onclick add ratings to the star
         const givenRating = index + 1;
         return (
           <label>

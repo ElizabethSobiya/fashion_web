@@ -5,11 +5,13 @@ import Rating from './Rating'
 function Results() {
   return (
    <>
+   {/* result tab content */}
    <div className='flex flex-col items-start md:m-[2%] sm:m-[2%] md:p-[1%] sm:p-[1%]  md:w-[15%] sm:w-[15%]'>
    <p className='text-black md:text-lg sm:text-base font-inter font-semibold'>Search Results</p>
    <br />
    <div className='leading-8'>
     <div className='flex flex-row'> 
+    {/* /search checkbox */}
     <h1 className='uppercase flex flex-row flex-start font-inter font-semibold md:text-sm sm:text-xs'>Brands</h1>
     <br />
     <RiArrowDropDownLine className='flex-end'/>
