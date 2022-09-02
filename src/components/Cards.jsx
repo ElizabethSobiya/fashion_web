@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Rating from './Rating'
 
 function Cards() {
-const [red, setRed] = useState('#FFFFFF');
+const [color, setColor] = useState('white');
 const [posts, setPosts] = useState([]);
 
   const fetchPost = () => {
@@ -22,8 +22,12 @@ const [posts, setPosts] = useState([]);
   }, []);
 
 
-const heartClick = ()=> {
-    setRed('#FF0000')
+const heartClick = (e)=> {
+   if(color === 'white'){
+       setColor('red')
+   }else{
+    setColor('white')
+   }
     console.log('red')
 }
 
@@ -33,8 +37,8 @@ const heartClick = ()=> {
     {posts.map((user,id)  => (
          <div key={id} className='relative'>
             <img src={user.dress} alt=""  className='md:w-[70%] md:h-[65%] sm:w-[60%] sm:h-[55%]'/>
-            <button className='absolute invisible group hover:visible md:bottom-[35%] sm:bottom-[45%] md:w-[70%] sm:w-[60%] text-white text-center bg-violet-500' >View Products</button >
-            <RiHeart3Fill className='absolute md:top-[3%] md:right-[32%] sm:top-[3%] sm:right-[42%] text-red-600'  onClick={heartClick}/>
+            <button className='absolute bg-transparent md:bottom-[35%] sm:bottom-[45%] md:w-[70%] sm:w-[60%] text-transparent hover:text-white text-center hover:bg-violet-500' >View Products</button >
+            <RiHeart3Fill className='absolute md:top-[3%] md:right-[32%] sm:top-[3%] sm:right-[42%]' style={{color:color}} onClick={heartClick}/>
             <p className='font-inter md:text-sm sm:text-xs font-medium'>{user.brand_name}</p>
            <div className='flex flex-row'>
            <p className='text-gray-500 line-through md:text-sm sm:text-xs '>Rs.{user.price} </p>
