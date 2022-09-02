@@ -4,8 +4,8 @@ export const Container = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
-   min-height: 10vh;
-   font-size: 60px;
+   min-height: 5vh;
+   font-size: 1rem;
    color:yellow;
 `
 export const Radio = styled.input`

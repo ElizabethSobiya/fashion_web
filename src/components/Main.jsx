@@ -32,14 +32,14 @@ const navigate = useNavigate()
   }
   return (
    <>
-  <div className= "bg-[rgba(215, 224, 255, 0.26)]">
-    <img src={Bg} alt=""className=' opacity-75 w-full h-[100vh] object-fit:contain' />
+  <div className= "bg-[rgba(215, 224, 255, 0.26)] md:overflow-x-hidden sm:overflow-x-hidden">
+    <img src={Bg} alt=""className=' opacity-75 md:w-full md:h-full sm:w-full sm:h-full ' />
     <div className='flex justify-evenly'>
      <input type="text" placeholder='Search'
      onClick={handleClick} 
-     className='absolute w-[60%] h-[8%] border-none rounded-xl focus:outline-none left-[250px] pl-10 
-     text-xl font-inter  top-[120px]'   />
-    <RiSearchLine size={25} color ={'#9ca3af'} onClick={handleChange} className ='absolute  right-[320px] top-[135px] '/>
+     className='absolute md:w-[60%] h-[8%] sm:w-[40%]  border-none rounded-xl focus:outline-none left-[20%] pl-10 
+     text-xl font-inter  top-[22%]'   />
+    <RiSearchLine size={25} color ={'#9ca3af'} onClick={handleChange} className ='absolute  md:right-[25%] md:top-[24%] sm:right-[45%] sm:bottom-[72%] '/>
     </div>
      <div>
         <img src={Logo} alt="" className='w-20 absolute right-5 top-4' />

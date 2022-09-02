@@ -1,8 +1,7 @@
 import React from 'react'
 import {RiHeart3Fill} from 'react-icons/ri';
-import Dress from '../assets/1.png'
 import { useState, useEffect } from 'react';
-// import Rating from './Rating'
+import Rating from './Rating'
 
 function Cards() {
 const [red, setRed] = useState('#FFFFFF');
@@ -30,40 +29,23 @@ const heartClick = ()=> {
 
   return (
     <>
-    <div className='grid grid-cols-4 gap-4 mt-[10%]'>
+    <div className='grid sm:grid-cols-2 md:grid-cols-4  gap-1 w-[85%] mt-[10%] '>
     {posts.map((user,id)  => (
-         <div key={id}>
-            <img src={user.dress} alt=""/>
-            <RiHeart3Fill className=''  onClick={heartClick}/>
-            <button className='hover:bg-[#6D84FF]' >View Products</button >
-            <p>{user.brand_name}</p>
-            <p>{user.price} <span>{user.offer_price}</span></p>
-            <p><span>(200)</span></p>
-            {/* <Rating/> */}   
+         <div key={id} className='relative'>
+            <img src={user.dress} alt=""  className='md:w-[70%] md:h-[65%] sm:w-[60%] sm:h-[55%]'/>
+            <button className='absolute md:bottom-[35%] sm:bottom-[45%] md:w-[70%] sm:w-[60%] text-white text-center bg-violet-500' >View Products</button >
+            <RiHeart3Fill className='absolute md:top-[3%] md:right-[32%] sm:top-[3%] sm:right-[42%] text-red-600'  onClick={heartClick}/>
+            <p className='font-inter md:text-base sm:text-sm font-medium'>{user.brand_name}</p>
+           <div className='flex flex-row'>
+           <p className='text-gray-500 line-through'>Rs.{user.price} </p>
+           <span className='text-blue-400'>Rs.{user.offer_price}</span>
+           </div>
+           <div className='flex flex-row'>
+             <Rating />  
+             <span className='pl-10'>(200)</span>
+             </div>
         </div>
           ))}
-        
-        {/* <div>
-            <img src={Dress} alt="" />
-            <RiHeart3Fill/>
-            <p>name</p>
-            <p>price <span>offer price</span></p>
-            <p></p>
-        </div>
-        <div>
-            <img src={Dress} alt="" />
-            <RiHeart3Fill/>
-            <p>name</p>
-            <p>price <span>offer price</span></p>
-            <p></p>
-        </div>
-        <div>
-            <img src={Dress} alt="" />
-            <RiHeart3Fill/>
-            <p>name</p>
-            <p>price <span>offer price</span></p>
-            <p></p>
-        </div> */}
     </div>
     </>
   )
