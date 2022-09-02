@@ -1,6 +1,6 @@
 import React from 'react'
 import {RiArrowDropDownLine} from 'react-icons/ri'
-import Rating from './Rating'
+// import Rating from './Rating'
 
 function Results() {
   return (
@@ -13,26 +13,26 @@ function Results() {
     <div className='flex flex-row'> 
     {/* /search checkbox */}
     <h1 className='uppercase flex flex-row flex-start font-inter font-semibold md:text-sm sm:text-xs'>Brands</h1>
-    <br />
+    
     <RiArrowDropDownLine className='flex-end'/>
     </div>
     
    <div className='border-solid border-b-1 border-black-400'>
-   <input type="checkbox" /><label className='md:text-sm sm:text-xs'>Mango</label>
+   <input type="checkbox" /><label className='md:text-sm sm:text-xs md:pl-2 sm:pl-2'>Mango</label>
     <br />
-    <input type="checkbox" /><label className='md:text-sm sm:text-xs' >H & M</label>
+    <input type="checkbox" /><label className='md:text-sm sm:text-xs md:pl-2 smpl-2' >H & M</label>
    </div>
    
    </div>
    <div className='leading-8 md:text-sm sm:text-xs'>
    <div className='flex flex-row'> 
-   <h1 className='uppercase flex flex-row flex-start font-inter font-semibold md:text-sm sm:text-xs'>Price Range</h1>
+   <h1 className='uppercase flex flex-row flex-start font-inter font-semibold md:text-sm sm:text-xs md:mb-2 sm:mb-2'>Price Range</h1>
    <br />
    <RiArrowDropDownLine/>
    </div>
-    <input type="checkbox" /><label className='md:text-sm sm:text-xs '>Under 500</label>
+    <input type="checkbox" /><label className='md:text-sm sm:text-xs md:pl-2  smpl-2'>Under 500</label>
     <br /> 
-    <input type="checkbox" /><label className='md:text-sm sm:text-xs' >1000-3000</label>
+    <input type="checkbox" /><label className='md:text-sm sm:text-xs md:pl-2 smpl-2' >1000-3000</label>
    
    </div>
    <div className='leading-8 md:text-sm sm:text-xs' >

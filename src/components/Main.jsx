@@ -17,7 +17,7 @@ function Main() {
   const [isChange, setIsChange] = useState(false);
 
   // handleclick for latest trends box
-  const handleClick = (event) => {
+  const handleClick = () => {
     //  toggle shown state
     setIsShown((current) => !current);
     //  or simply set it to true

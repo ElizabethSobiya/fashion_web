@@ -48,12 +48,12 @@ const heartClick = (e)=> {
             <p className='font-inter md:text-sm sm:text-xs font-medium'>{user.brand_name}</p>
            <div className='flex flex-row'>
            <p className='text-gray-500 line-through md:text-sm sm:text-xs '>Rs.{user.price} </p>
-           <span className='text-blue-400 md:text-sm sm:text-xs '>Rs.{user.offer_price}</span>
+           <span className='text-blue-400 md:text-sm sm:text-xs'>Rs.{user.offer_price}</span>
            </div>
            <div className='flex flex-row'>
             {/* rating icons */}
              <Rating />  
-             <span className='md:pl-5 sm:pl-4 '>(200)</span>
+             <span className='md:pl-5 sm:pl-4'>(200)</span>
              </div>
         </div>
           ))}

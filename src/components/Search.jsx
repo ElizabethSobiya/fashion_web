@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import Logo from '../assets/logo.png'
 import {RiSearchLine} from 'react-icons/ri'
 import Results from './Results';
