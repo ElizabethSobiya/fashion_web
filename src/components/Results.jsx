@@ -1,8 +1,37 @@
-import React from 'react'
+import React, { useState , useEffect} from 'react'
 import {RiArrowDropDownLine} from 'react-icons/ri'
 // import Rating from './Rating'
 
 function Results() {
+
+const [selectedUser, setSelectedUser] = useState([]);
+const [userData, setUserData] = useState([]);
+
+
+const fetchPost = () => {
+  fetch("https://demo8786099.mockable.io/clothes")
+  .then(response => {
+      return response.json()
+  })
+  .then(data => {
+    setUserData(data)
+  })
+};
+
+useEffect(() => {
+  fetchPost();
+}, []);
+
+const changeSelectedUser = (id)=>{
+  let activeUserIndex = userData.findIndex((user, i) =>{
+      if(user.id === id){
+          return true
+      }
+  })
+  setSelectedUser({activeUserId : id , activeUserIndex})
+}
+
+
   return (
    <>
    {/* result tab content */}
@@ -18,7 +47,7 @@ function Results() {
     </div>
     
    <div className='border-solid border-b-1 border-black-400'>
-   <input type="checkbox" /><label className='md:text-sm sm:text-xs md:pl-2 sm:pl-2'>Mango</label>
+   <input type="checkbox" onClick={changeSelectedUser} /><label className='md:text-sm sm:text-xs md:pl-2 sm:pl-2'>Mango</label>
     <br />
     <input type="checkbox" /><label className='md:text-sm sm:text-xs md:pl-2 smpl-2' >H & M</label>
    </div>

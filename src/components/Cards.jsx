@@ -37,6 +37,7 @@ const heartClick = (e)=> {
   return (
     <>
     <div className='grid sm:grid-cols-2 md:grid-cols-4  gap-1 w-[85%] mt-[10%] '>
+      {/* {filterUser.length> 1 ? */}
     {posts.map((user,id)  => (
          <div key={id} className='relative'>
             <img src={user.dress} alt=""  className='md:w-[70%] md:h-[65%] sm:w-[60%] sm:h-[55%]'/>
